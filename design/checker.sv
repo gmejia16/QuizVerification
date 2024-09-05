@@ -66,6 +66,10 @@ class checker_c #(parameter width = 16, parameter depth = 8);
                     end 
                 end
 
+                lectura_escritura: begin
+
+                end
+
                 reset: begin //en caso de un reset vacía la fifo simulada y envía los datos perdidos al SB
                     contador_auxiliar= emul_fifo.size();
                     for ( int i = 0 ; i<contador_auxiliar ; i++ ) begin
