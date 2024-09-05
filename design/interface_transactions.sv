@@ -11,7 +11,7 @@ typedef enum { lectura, escritura, reset, lectura_escritura  } tipo_trans;
 
 class trans_fifo #(parameter width = 16);
     rand int retardo;       //tiempo de retardo en ciclos de reloj que se debe esperar antes de ejecutar la trasacción
-    rand bit[width-1:0] dato   //este es el dato de la transacción 
+    rand bit[width-1:0] dato;   //este es el dato de la transacción 
     int tiempo;             //representa el tiempo de la simulación en el que se ejecutó la transacción
     rand tipo_trans tipo; //lectura, escritura, reset y lectura_escritura
     int max_retardo;
