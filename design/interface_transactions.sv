@@ -16,7 +16,7 @@ class trans_fifo #(parameter width = 16);
     rand tipo_trans tipo; //lectura, escritura, reset y lectura_escritura
     int max_retardo;
 
-    constraint const_retardo {retardo < max_retardo; retardo > 0 } ;        
+    constraint const_retardo {retardo < max_retardo; retardo > 0 }        
 
     function new (int ret = 0, bit[width-1:0] dto = 0, int tmp = 0, tipo_trans tpo = lectura, int mx_rtrd = 10);
         this.retardo = ret;
